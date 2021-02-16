@@ -21,8 +21,8 @@ type Service struct {
 	srv  *grpc.Server
 }
 
-// New returns a new gRRPC Wrap Service
-func New(ctx context.Context, opts Options) *Service {
+// NewService returns a new gRRPC Wrap Service
+func NewService(ctx context.Context, opts Options) *Service {
 	return &Service{
 		srv:  grpc.NewServer(),
 		opts: opts,
